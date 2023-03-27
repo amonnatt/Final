@@ -21,6 +21,12 @@ def test_input_4():
     exected_result = "van: 0"+" "+"car: 1"
     actual_result = chack_car(input)
     assert exected_result == actual_result
+@pytest.mark.number  # pytest -m number
+def test_input_7():
+    input = 7
+    exected_result = "van: 1"+" "+"car: 0"
+    actual_result = chack_car(input)
+    assert exected_result == actual_result
 
 @pytest.mark.number  # pytest -m number
 def test_input_11():
@@ -66,8 +72,15 @@ def test_input_integer_input_sharp():
     assert exected_result == actual_result
 
 @pytest.mark.validate  # pytest -m validate
-def test_input_integer_input_sharp():
+def test_input_integer_input_0_1():
     input = 0.1
+    exected_result = "input integer"
+    actual_result = validate_number(input)
+    assert exected_result == actual_result
+
+@pytest.mark.validate  # pytest -m validate
+def test_input_integer_input_1_1():
+    input = 1.1
     exected_result = "input integer"
     actual_result = validate_number(input)
     assert exected_result == actual_result
